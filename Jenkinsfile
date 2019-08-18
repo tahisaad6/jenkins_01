@@ -1,6 +1,8 @@
 pipeline {
     agent any
-
+ environment {
+ 
+    PATH = "C:\\Program Files\\Git\\usr\\bin;${env.PATH}"
     stages {
         stage ('Compile Stage') {
 
@@ -29,4 +31,6 @@ pipeline {
             }
         }
     }
+    
+   }
 }
